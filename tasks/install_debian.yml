@@ -1,0 +1,11 @@
+---
+
+# Install tasks for install on Debian family OS
+- name: 'INSTALL | APT | Install packages'
+  apt:
+    name: "{{ item.name }}"
+    version: "{{ item.version | default(omit) }}"
+    state: "{{ item.state | default('present') }}"
+    update_cache: "{{ pip_apt_update_cache }}"
+    cache_valid_time: "{{ pip_apt_cache_valid_time }}"
+  with_items: "{{ pip_os_packages }}"

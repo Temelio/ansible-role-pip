@@ -1,0 +1,17 @@
+---
+
+# Main tasks file for pip role
+
+- name: 'INIT | Manage variables to use for our target'
+  include: "{{ role_path }}/tasks/manage_variables.yml"
+  tags:
+    - 'role::pip'
+    - 'role::pip::init'
+
+
+- name: 'INSTALL | Manage installation tasks'
+  become: True
+  include: "{{ role_path }}/tasks/install_{{ ansible_os_family | lower }}.yml"
+  tags:
+    - 'role::pip'
+    - 'role::pip::install'
