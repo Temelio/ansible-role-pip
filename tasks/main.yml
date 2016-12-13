@@ -7,3 +7,11 @@
   tags:
     - 'role::pip'
     - 'role::pip::init'
+
+
+- name: 'INSTALL | Manage installation tasks'
+  become: True
+  include: "{{ role_path }}/tasks/install_{{ ansible_os_family | lower }}.yml"
+  tags:
+    - 'role::pip'
+    - 'role::pip::install'

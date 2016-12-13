@@ -2,3 +2,10 @@
 
 # Defaults vars file for pip role
 
+# General variables
+pip_os_packages: "{{ _pip_os_packages }}"
+
+
+# Specific Debian family vars
+pip_apt_update_cache: True
+pip_apt_cache_valid_time: 3600

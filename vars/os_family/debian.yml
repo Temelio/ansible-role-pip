@@ -1,0 +1,5 @@
+---
+
+# Specific Debian values
+_pip_os_packages:
+  - name: 'python-pip'

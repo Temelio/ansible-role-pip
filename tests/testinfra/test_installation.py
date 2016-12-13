@@ -9,8 +9,13 @@ pytestmark = pytest.mark.docker_images(
     'infopen/ubuntu-xenial-ssh-py27:0.2.0'
 )
 
-def test_foo_a(User):
-    assert User().name == 'root'
 
-def test_foo_b(User):
-    assert User().name == 'root'
+def test_install_on_debian_family(Package, SystemInfo):
+    """
+    Test package installation on Debian family
+    """
+
+    if SystemInfo.distribution not in ['debian', 'ubuntu']:
+        pytest.skip('Not apply to %s' % SystemInfo.distribution)
+
+    assert Package('python-pip').is_installed
