@@ -47,12 +47,12 @@ $ MOLECULE_DRIVER=vagrant tox
 
 ``` yaml
 # General variables
-pip_os_packages: "{{ _pip_os_packages }}"
+pip_packages: "{{ _pip_packages }}"
 
 
 # Specific Debian family vars
-pip_apt_update_cache: True
-pip_apt_cache_valid_time: 3600
+pip_repository_update_cache: True
+pip_repository_cache_valid_time: 3600
 ```
 
 ## Dependencies
