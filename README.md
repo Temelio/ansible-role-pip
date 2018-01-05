@@ -1,6 +1,10 @@
 # pip
 
-[![Build Status](https://travis-ci.org/Temelio/ansible-role-pip.svg?branch=master)](https://travis-ci.org/Temelio/ansible-role-pip)
+[![Build Status](https://img.shields.io/travis/Temelio/ansible-role-pip/master.svg?label=travis_master)](https://travis-ci.org/Temelio/ansible-role-pip)
+[![Build Status](https://img.shields.io/travis/Temelio/ansible-role-pip/develop.svg?label=travis_develop)](https://travis-ci.org/Temelio/ansible-role-pip)
+[![Updates](https://pyup.io/repos/github/Temelio/ansible-role-pip/shield.svg)](https://pyup.io/repos/github/Temelio/ansible-role-pip/)
+[![Python 3](https://pyup.io/repos/github/Temelio/ansible-role-pip/python-3-shield.svg)](https://pyup.io/repos/github/Temelio/ansible-role-pip/)
+[![Ansible Role](https://img.shields.io/ansible/role/14263.svg)](https://galaxy.ansible.com/Temelio/pip/)
 
 Install pip package.
 
